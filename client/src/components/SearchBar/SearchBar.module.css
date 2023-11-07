@@ -1,0 +1,23 @@
+.container{
+    position: relative;
+    display: flex;
+    justify-content: right;
+    padding: 3px;
+}
+
+.container input{
+    border-radius: 15px;
+    margin: 5px;
+    background: #0a24729e;
+}
+
+.btn{
+    text-decoration: none;
+    position: relative;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-right: -390px;
+    background: #027058af;
+    border-radius: 15px;
+}

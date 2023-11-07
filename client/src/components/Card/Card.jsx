@@ -1,5 +1,8 @@
-import styles from './Card.module.css';
+/* hooks */
 import { Link } from 'react-router-dom';
+
+/* styles */
+import styles from './Card.module.css';
 
 const Card = ({id, name, background_image, rating, genres}) => {
 

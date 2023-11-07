@@ -1,0 +1,40 @@
+
+
+.container{
+    position: relative;
+    padding: 50px;
+    margin-top: 12%;
+    border-radius: 150px;
+}
+
+.container h1{
+    font-size: 140px;
+    color: #027058;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.container h1:hover{
+    -webkit-text-stroke: #027058;
+    color: #024270;
+}
+
+.container button{
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    background: #027058;
+    color: black;
+    font-size: 20px;
+    padding: 12px 50px;
+    border-radius: 50px;
+    margin-top: 5px;
+    box-shadow: 0 0 10px rgba(208, 205, 205, 0.451);
+    transition: 0.3s;
+}
+
+.container button:hover, button:focus, button:active{
+    box-shadow: 0 0 20px rgba(15, 159, 5, 0.757);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}

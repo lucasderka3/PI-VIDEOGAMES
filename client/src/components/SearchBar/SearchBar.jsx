@@ -5,6 +5,9 @@ import { useState } from "react";
 /* actions */
 import { getGameByName, getGames} from "../../redux/actions";
 
+/* styles */
+import styles from './SearchBar.module.css';
+
 
 const SearchBar = () => {
     const [name, setName] = useState('');
@@ -27,9 +30,9 @@ const SearchBar = () => {
     }
 
     return(
-        <div>
+        <div className={styles.container}>
             <input type="text" value={name} onChange={handleChange}/>
-            <button type='button' onClick={handleSubmit}>Buscar</button>
+            <button className={styles.btn} type='button' onClick={handleSubmit}>Buscar</button>
             {
                 <ul>
                     {videogames.map((game) => {  

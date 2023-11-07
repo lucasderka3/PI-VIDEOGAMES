@@ -12,7 +12,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import Filters from '../../components/Filters/Filters';
 
 /* styles */
-import './Home.module.css'
+import styles from './Home.module.css';
 
 
 const Home = () => {
@@ -22,7 +22,6 @@ const Home = () => {
     const allVideogames = useSelector(state => state.allVideogames);
 
     const [order, setOrder] = useState('');
-    const [showFilters, setShowFilters] = useState(true)
 
     const [actualPage, setActualPage ] = useState(1);
     const [pageGames, setPageGames] = useState(15);
@@ -45,9 +44,8 @@ const Home = () => {
     return(
         <section>
             <NavBar/>
-            <div>
-                <button onClick={() => setShowFilters(!showFilters)}>Filters</button>
-                {showFilters && <Filters setActualPage={setActualPage} setOrden={setOrder}/>}
+            <div className={styles.filter}>
+                <Filters setActualPage={setActualPage} setOrden={setOrder}/>
             </div>
             <Cards games={gamesActuales}/>
             <Paginated allGames={videogames.length} pageGames={pageGames} currentPage={actualPage} paginado={handlePaginado}/>

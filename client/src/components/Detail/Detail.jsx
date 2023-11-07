@@ -1,8 +1,12 @@
+/* hooks */
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
+
+/* actions */
 import { getDetailById } from "../../redux/actions";
 
+/* styles */
 import styles from './Detail.module.css'
 
 const Detail = () => {

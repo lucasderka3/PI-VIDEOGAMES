@@ -1,5 +1,6 @@
 import Card from "../Card/Card";
 
+/* styles */
 import style from "./Cards.module.css"
 
 const Cards = ({games}) => {
