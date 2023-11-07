@@ -1,0 +1,34 @@
+.container{
+    display: flex;
+}
+
+
+
+.description{
+    border: 3px solid #0a2472;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-right: 1px;
+    
+}
+
+.info{
+    border: 3px solid #0a2472;
+    border-radius: 15px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-right: 100px;
+    padding: 5px;
+}
+
+.info h1{
+    text-shadow: 4px 4px 5px #0a2472;
+}
+
+
+.info img{
+    height: 300px;
+    border-radius: 15px;
+}

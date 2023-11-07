@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #0d1f22;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.container:hover{
+    transform: scale(1.05);
+}
+
+.container img{
+    width: 100%;
+    border-radius: 15px;
+    margin: 0 auto;
+   
+}
+
+.container h2{
+    font-size: 20px;
+    color: #0a2472;
+    text-shadow:  1px 1px 4px  #ffffff;
+}
+
