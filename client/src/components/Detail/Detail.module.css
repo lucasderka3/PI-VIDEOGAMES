@@ -32,3 +32,9 @@
     height: 300px;
     border-radius: 15px;
 }
+
+.container button{
+    text-decoration: none;
+    background: #027058af;
+    border-radius: 15px; 
+}

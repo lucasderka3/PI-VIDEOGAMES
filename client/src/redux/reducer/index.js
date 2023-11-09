@@ -15,6 +15,12 @@ function reducer (state = initialState, action){
                 videogames: action.payload,
                 allVideogames: action.payload
             }
+        
+        case POST_GAME:
+            return{
+                ...state,
+                videogames: action.payload
+            }
 
         case GET_BY_NAME:
             return{
@@ -34,11 +40,7 @@ function reducer (state = initialState, action){
                 ...state,
                 allGenres: action.payload
             }
-        case POST_GAME:
-            return{
-                ...state,
-                videogames: [payload, ...state.videogames]
-            }
+        
 
         case ORDER_BY_NAME:
             let sortedArr = action.payload === 'A-Z'

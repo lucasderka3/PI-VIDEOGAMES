@@ -1,3 +1,12 @@
 .container{
     position: relative;
 }
+
+.bott{
+    position: relative;
+    margin-top: -30px;
+    margin-right: 755px;
+    text-decoration: none;
+    background: #027058af;
+    border-radius: 15px; 
+}

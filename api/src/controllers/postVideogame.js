@@ -1,3 +1,4 @@
+const moment = require('moment');
 const { Videogame, Genre } = require('../db');
 
 const postVideogame = async(req, res) => {
@@ -8,20 +9,22 @@ const postVideogame = async(req, res) => {
             return res.status(400).send('All fields are required')
         };
 
+        const formattedDate = moment(released, 'MM/DD/YYYY').format();
+
         //Creo el videojuego para posterior asociarlo a un genero de mi DB
         const gameCreated = await Videogame.create({
                 name: name,
                 description: description,
                 image: image,
-                released: released,
+                released: formattedDate,
                 rating: rating,
-                platforms: platforms
+                platforms: platforms,
         })
 
         // Busco los generos en la DB por su nombre
         const genreInstances = await Genre.findAll({
             where: {
-                name: genres.name
+                id: genres
             }
         })
 
@@ -38,3 +41,5 @@ const postVideogame = async(req, res) => {
 module.exports = {
     postVideogame
 }
+
+

@@ -1,0 +1,33 @@
+.formRegister{
+    width: 400px;
+    background: #0d1f22;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    
+}
+
+.controls{
+    width: 100%;
+    background-color: #0d1f22;
+    padding: 10px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #0a2472;
+}
+
+.bt{
+    text-decoration: none;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    background: #027058af;
+    border-radius: 15px;    
+}
+
+.container h1{
+    color: #027058af;
+    text-shadow:  1px 1px 4px  #ffffff;
+}

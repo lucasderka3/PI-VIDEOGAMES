@@ -2,6 +2,25 @@ import axios from 'axios';
 import { GET_GAMES, GET_DETAIL, GET_BY_NAME, GET_GENRES, POST_GAME, ORDER_BY_NAME, ORDER_BY_RATING, FILTER_GENRES, FILTER_CREATED } from './actions-type';
 
 
+export const postGame = (newGame) => {
+    
+    return async (dispatch) => {
+        try {
+            const endPoint = "http://127.0.0.1:3001/videogames";
+            const { data } = await axios({
+                url: endPoint,
+                method:"POST",
+                data:newGame
+            })
+            dispatch({
+                type: POST_GAME,
+                payload:data
+            })
+        } catch (error) {
+            error
+        }
+    }
+}
 
 export const getGames = () => {
     return async (dispatch) => {
@@ -46,6 +65,7 @@ export const getDetailById = (id) => {
     }
 }
 
+
 export const getGenres = () => {
     return async (dispatch) => {
         try {
@@ -62,19 +82,6 @@ export const getGenres = () => {
     }
 }
 
-export const postGame = (game) => {
-   return async function(dispatch){
-    try {
-        const {data} = await axios.post('http://localhost:3001/videogames', game)
-        return dispatch({
-            type: POST_GAME,
-            payload: data
-        })
-    } catch (error) {
-        throw Error(error.message)
-    }
-   }
-}
 
 export const orderByName = (payload) => {
     return{
